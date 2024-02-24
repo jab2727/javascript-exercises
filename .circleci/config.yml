@@ -6,7 +6,7 @@ orbs:
 jobs:
   test-solutions:
     executor: node/default
-    steps: 
+    steps:
       - checkout
       - node/install-packages:
           pkg-manager: npm

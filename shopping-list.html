@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping list example</title>
     <style>
       li {
@@ -17,42 +17,39 @@
     </style>
   </head>
   <body>
-
     <h1>My shopping list</h1>
 
     <div>
       <label for="item">Enter a new item:</label>
-      <input type="text" name="item" id="item">
+      <input type="text" name="item" id="item" />
       <button id="addButton">Add item</button>
     </div>
 
-    <ul>
-
-    </ul>
+    <ul></ul>
 
     <script>
-        const ul = document.querySelector("ul");
-        const input = document.querySelector("input");
-        const addButton = document.querySelector("#addButton");
+      const ul = document.querySelector("ul");
+      const input = document.querySelector("input");
+      const addButton = document.querySelector("#addButton");
 
-        addButton.addEventListener('click', () =>{
-            let newListItem = input.value;
-            input.value = "";
+      addButton.addEventListener("click", () => {
+        let newListItem = input.value;
+        input.value = "";
 
-            let listBullet = document.createElement("li");
-            let span = document.createElement("span");
-            let deleteButton = document.createElement("button");
-            listBullet.appendChild(span);
-            listBullet.appendChild(deleteButton);
-            span.textContent = newListItem;
-            deleteButton.textContent = "Delete";
-            deleteButton.addEventListener('click', () => {
-                ul.removeChild(listBullet);
-            })
-
-            ul.appendChild(listBullet);
-            input.focus();
+        let listBullet = document.createElement("li");
+        let span = document.createElement("span");
+        let deleteButton = document.createElement("button");
+        listBullet.appendChild(span);
+        listBullet.appendChild(deleteButton);
+        span.textContent = newListItem;
+        deleteButton.textContent = "Delete";
+        deleteButton.addEventListener("click", () => {
+          ul.removeChild(listBullet);
         });
+
+        ul.appendChild(listBullet);
+        input.focus();
+      });
     </script>
   </body>
 </html>

@@ -1,6 +1,6 @@
-const getTheTitles = function(list) {
-    let names = list.map(item => item.title);
-    return(names);
+const getTheTitles = function (list) {
+  let names = list.map((item) => item.title);
+  return names;
 };
 
 // const books = [

@@ -1,41 +1,42 @@
 body {
-    max-width: 800px;
+  max-width: 800px;
 }
 
 #gameboard {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
-    aspect-ratio: 1/1;
-    margin: 15px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  aspect-ratio: 1/1;
+  margin: 15px;
 }
 
 #scoreboard {
-    grid-column: 1/4;
-    background-color: aqua;
-    height: 100px;
-    width: fill;
-    margin: 15px;
-    font-size: 50px;
+  grid-column: 1/4;
+  background-color: aqua;
+  height: 100px;
+  width: fill;
+  margin: 15px;
+  font-size: 50px;
 }
 
 .XorO {
-    background-color: aquamarine;
-    aspect-ratio: 1/1;
+  background-color: aquamarine;
+  aspect-ratio: 1/1;
 }
 
-#scoreboard, .XorO {
-    border-radius: 15px;
-    color: azure;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#scoreboard,
+.XorO {
+  border-radius: 15px;
+  color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .XorO p {
-    margin: 0px;
-    padding: 0px;
-    font-size: 10cqw;
-    font-family: Tahoma, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  font-size: 10cqw;
+  font-family: Tahoma, sans-serif;
 }

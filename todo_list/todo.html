@@ -1,38 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do list</title>
-    <link rel="stylesheet" href="todo.css">
-</head>
-<body>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
     <div id="container">
-        <div class="column" id="projects">
-            <div id="new-project">
-                <button>Add New Project</button>
-            </div>
+      <div class="column" id="projects">
+        <div id="new-project">
+          <button>Add New Project</button>
         </div>
-        <div class="column" id="todos">
-            <div id="new-todo">
-                <p id="project-title">No project selected.</p>
-                <form action="" onsubmit="return false">
-                    <label for="description">Description:</label>
-                    <input type="text" id="description" name="description">
-                    <label for="dueDate">Due Date:</label>
-                    <input type="text" id="dueDate" name="dueDate"><br>
-                    <p>Priority:</p>
-                    <input type="radio" id="low" name="priority" value="low">
-                    <label for="low">Low</label>
-                    <input type="radio" id="medium" name="priority" value="medium">
-                    <label for="medium">Medium</label>
-                    <input type="radio" id="high" name="priority" value="high">
-                    <label for="high">High</label>
-                    <input type="submit" id="submit" value="Add New To-Do">
-                </form>
-            </div>
+      </div>
+      <div class="column" id="todos">
+        <div id="new-todo">
+          <p id="project-title">No project selected.</p>
+          <form action="" onsubmit="return false">
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" />
+            <label for="dueDate">Due Date:</label>
+            <input type="text" id="dueDate" name="dueDate" /><br />
+            <p>Priority:</p>
+            <input type="radio" id="low" name="priority" value="low" />
+            <label for="low">Low</label>
+            <input type="radio" id="medium" name="priority" value="medium" />
+            <label for="medium">Medium</label>
+            <input type="radio" id="high" name="priority" value="high" />
+            <label for="high">High</label>
+            <input type="submit" id="submit" value="Add New To-Do" />
+          </form>
         </div>
+      </div>
     </div>
     <script src="./todo.js"></script>
-</body>
+  </body>
 </html>
