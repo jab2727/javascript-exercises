@@ -79,7 +79,6 @@ function fibs(iterations){
 }
 
 function fibsRec(start, iterations, array){
-    let completion = [];
     if (start==0 && iterations==0){
         return [0];
     } else if (start==1 && iterations==1){
@@ -91,3 +90,89 @@ function fibsRec(start, iterations, array){
         return array;
     }
 }
+
+function mergeSort(startArray){
+    let prepArray = [];
+    for (let i=0; i<startArray.length; i++) {
+        prepArray.push([startArray[i]]);
+    }
+
+    while (prepArray.length>1){
+        sortedArray = [];
+        if (prepArray.length % 2 == 1){
+            sortedArray.push(prepArray.shift());
+        }
+
+        while (prepArray.length>1){
+            tempArray = [];
+            leftArray = prepArray.shift();
+            rightArray = prepArray.shift();
+
+            while (leftArray.length>0 && rightArray.length>0){
+                if (leftArray[0]<rightArray[0]){
+                    tempArray.push(leftArray.shift());
+                } else {
+                    tempArray.push(rightArray.shift());
+                }
+            }
+            while (leftArray.length>0){
+                tempArray.push(leftArray.shift());
+            }
+            while (rightArray.length>0){
+                tempArray.push(rightArray.shift());
+            }
+            sortedArray.push(tempArray);
+
+        }
+        prepArray = sortedArray;
+    }
+    return prepArray;
+}
+
+console.log(mergeSort([9,6,2,4,8,7,5,3]));
+// console.log(mergeSort([1,2,3,4,5]));
+
+
+function mergeSortRecursion(startArray){
+    let prepArray = [];
+    for (let i=0; i<startArray.length; i++) {
+        prepArray.push([startArray[i]]);
+    }
+
+    return mergeSortLoop(prepArray);
+}
+
+function mergeSortLoop(preppedArray){
+
+    sortedArray = [];
+    if (preppedArray.length % 2 == 1){
+        sortedArray.push(preppedArray.shift());
+    }
+
+    while (preppedArray.length>1){
+        tempArray = [];
+        leftArray = preppedArray.shift();
+        rightArray = preppedArray.shift();
+
+        while (leftArray.length>0 && rightArray.length>0){
+            if (leftArray[0]<rightArray[0]){
+                tempArray.push(leftArray.shift());
+            } else {
+                tempArray.push(rightArray.shift());
+            }
+        }
+        while (leftArray.length>0){
+            tempArray.push(leftArray.shift());
+        }
+        while (rightArray.length>0){
+            tempArray.push(rightArray.shift());
+        }
+        sortedArray.push(tempArray);
+    }
+
+    if (sortedArray.length == 1){
+        return sortedArray;
+    } else {mergeSortLoop(sortedArray)}
+}
+
+console.log(mergeSortRecursion([9,6,2,4,8,7,5,3]));
